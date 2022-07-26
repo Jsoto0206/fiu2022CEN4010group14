@@ -35,6 +35,12 @@ public class BookServiceImpl implements BookService{
 		//return Bookerepo.findAll();
 	}
 
+	public List<Book> serchnameBooks(Long query) {
+		List<Book> books = Bookerepo.serchnameBooks(query);
+		return books;
+		//return Bookerepo.findAll();
+	}
+	
 
 	@GetMapping
 	@Override

@@ -38,6 +38,11 @@ public class BookController {
 		return ResponseEntity.ok(bookService.serchBooks(query));
 	}
 	
+	@GetMapping("/searchname")
+	public ResponseEntity<List<Book>> serchnameBooks(@RequestParam("query") Long query){
+		return ResponseEntity.ok(bookService.serchnameBooks(query));
+	}
+	
 	@GetMapping("/searchRating")
 	public ResponseEntity<List<Book>> findBybookRatingGreaterThanquery(@RequestParam("query") int query){
 		return ResponseEntity.ok(bookService.findBybookRatingGreaterThanquery(query));
