@@ -21,10 +21,6 @@ public class BookServiceImpl implements BookService{
 	}
 
 
-	@Override
-	public Book saveBook(Book book) {
-		return Bookerepo.save(book);
-	}
 
 
 
@@ -42,6 +38,7 @@ public class BookServiceImpl implements BookService{
 	}
 	
 
+	
 	@GetMapping
 	@Override
 	public List<Book> findBybookRatingGreaterThanquery(int query) {

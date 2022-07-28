@@ -26,11 +26,7 @@ public class BookController {
 		super();
 		this.bookService = bookService;
 	}
-	//create book REST API
-	@PostMapping()
-	public ResponseEntity<Book> saveBook(@RequestBody Book book){
-		return new ResponseEntity<Book>(bookService.saveBook(book), HttpStatus.CREATED);
-	}
+
 	
 	//get all books REST API
 	@GetMapping("/searchGenre")
@@ -52,5 +48,7 @@ public class BookController {
 	public ResponseEntity<List<Book>> findbestsellers(){
 		return ResponseEntity.ok(bookService.findbestsellers());
 	}
+	
+	
 	
 }
